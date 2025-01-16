@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Brain Reducer",
+    "version": "1.0",
+    "description": "Custom AI Web Browsing",
+    "action": {
+        "default_popup": "src/Popup/index.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage",
+        "tabs"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "options_page": "src/Options/index.html",
+    "background": {
+        "service_worker": "background.js"
+    }
+}
