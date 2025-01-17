@@ -4,7 +4,7 @@
     "version": "1.0",
     "description": "Custom AI Web Browsing",
     "action": {
-        "default_popup": "src/Popup/index.html"
+        "default_popup": "index.html"
     },
     "content_scripts": [
         {
@@ -18,13 +18,15 @@
     ],
     "permissions": [
         "storage",
-        "tabs"
+        "tabs",
+        "activeTab",
+        "scripting"
     ],
     "host_permissions": [
         "<all_urls>"
     ],
-    "options_page": "src/Options/index.html",
     "background": {
+        "type": "module",
         "service_worker": "background.js"
     }
 }
