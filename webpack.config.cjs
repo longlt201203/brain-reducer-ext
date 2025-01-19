@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   mode: "production", // Use "development" for debugging
@@ -36,6 +37,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+      },
     ],
   },
   optimization: {
@@ -49,5 +54,6 @@ module.exports = {
     new CopyPlugin({
       patterns: [{ from: "public", to: "." }],
     }),
+    new MiniCssExtractPlugin(),
   ],
 };

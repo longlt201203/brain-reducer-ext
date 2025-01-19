@@ -1,10 +1,11 @@
-export type RuntimeAction = "getDOMStructure";
+export type RuntimeAction = "getDOMStructure" | "getPageInfo";
 
-export interface RuntimeMessage {
+export interface RuntimeMessage<T = unknown> {
   action: RuntimeAction;
+  data?: T;
 }
 
-export interface RuntimeResponse {
+export interface RuntimeResponse<T = unknown> {
   error?: string;
-  data?: unknown;
+  data?: T;
 }

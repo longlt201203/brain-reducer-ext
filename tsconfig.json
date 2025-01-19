@@ -8,8 +8,6 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {
-      "*": ["node_modules/*"]
-    }
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
   }
 }
