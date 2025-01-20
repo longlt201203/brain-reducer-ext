@@ -6,11 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build:vite": "tsc -b && vite build",
-    "build:webpack": "rimraf dist && webpack --config webpack.config.cjs",
+    "build": "rimraf dist && webpack --config webpack.config.cjs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.5.2",
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.26.3",
@@ -20,11 +21,14 @@
     "babel-loader": "^9.2.1",
     "brain-reducer-ext": "file:",
     "css-loader": "^7.1.2",
+    "highlight.js": "^11.11.1",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
+    "openai": "^4.79.1",
     "postcss-loader": "^8.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.3",
     "rimraf": "^6.0.1",
     "ts-loader": "^9.5.2",
     "vite-plugin-singlefile": "^2.1.0",

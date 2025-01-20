@@ -37,7 +37,7 @@ function getDOMStructure() {
   const eleMap = new Map<Element, DOMStructureObject>();
   while (queue.length > 0) {
     const current = queue.shift()!;
-    let obj: DOMStructureObject = {
+    const obj: DOMStructureObject = {
       tagName: current.tagName,
       id: current.id,
       class: current.className,

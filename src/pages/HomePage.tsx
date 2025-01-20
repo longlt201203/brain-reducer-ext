@@ -1,8 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { Button, Collapse, Flex, Typography } from "antd";
-import FastChat from "src/components/FastChat";
-import { RuntimeResponse } from "src/utils/runtime-message";
-import { PageInfo } from "src/utils/types";
+import FastChat from "../components/FastChat";
+import { RuntimeResponse } from "../utils/runtime-message";
+import { PageInfo } from "../utils/types";
 import Browser from "webextension-polyfill";
 
 const { Link } = Typography;
@@ -34,7 +34,7 @@ export default function HomePage() {
         </Button>
         <Collapse>
           <Collapse.Panel header="Fast Chat" key="chat">
-            <FastChat />
+            <FastChat pageInfo={getPageInfoInfo.data} />
           </Collapse.Panel>
           <Collapse.Panel header="Links" key="links">
             <ul className="list-disc p-1">

@@ -41,7 +41,7 @@ export default function OptionsPage() {
         onFinish={setStoreMutation.mutate}
       >
         <Form.Item<ExtentionStore> name="apiKey" label="API Key">
-          <Input placeholder="Enter API Key" />
+          <Input.Password placeholder="Enter API Key" />
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit">
